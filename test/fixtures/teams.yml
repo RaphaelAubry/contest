@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# success validations
+one:
+  name: team number 1
+  city: city 1
+
+two:
+  name: team number 2
+  city: city 2
+
+# fail validations
+three:
+  name: team number 50 team number 50 team number 50 team number 50
+  city: city 3
+
+four:
+  name:
+  city:
+
+five:
+  name: team number 5
+  city:
+
+six:
+  name:
+  city: city 6

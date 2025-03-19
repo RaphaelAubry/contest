@@ -1,0 +1,5 @@
+<h1>Edit Team</h1>
+
+<%= turbo_frame_tag "team_#{@team.id}" do %>
+  <%= render 'form', team: @team %>
+<% end %>
