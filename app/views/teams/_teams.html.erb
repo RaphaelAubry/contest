@@ -1,8 +1,7 @@
 <%= turbo_frame_tag 'teams' do %>
-
   <% if @teams.present? %>
   <table-1>
-        <table-head>
+        <table-head id="table-head">
           <table-row>
             <table-data>
               Name
@@ -26,5 +25,4 @@
         <% end %>
     </table-1>
   <% end %>
-
 <% end %>

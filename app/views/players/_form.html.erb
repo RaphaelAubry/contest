@@ -1,0 +1,23 @@
+<%= form_for player do |form| %>
+  <%= render "layouts/error_messages", resource: player %>
+  <table-1>
+    <table-row>
+      <table-data>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </table-data>
+      <table-data>
+        <%= form.label :position %>
+        <%= form.select :position, Player::POSITIONS %>
+      </table-data>
+      <table-data>
+        <%= form.label :team %>
+        <%= form.select(:team_id, Team.all.map { |team| [ team.name, team.id ] }) %>
+      </table-data>
+      <table-data>
+        <%= form.submit :validate, data: { turbo_frame: 'players' } %>
+        <%= link_to 'cancel', players_path %>
+      </table-data>
+    </table-row>
+  </table-1>
+<% end %>

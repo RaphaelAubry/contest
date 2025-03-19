@@ -25,3 +25,7 @@ five:
 six:
   name:
   city: city 6
+
+seven:
+  name: team number 7
+  city: city 7

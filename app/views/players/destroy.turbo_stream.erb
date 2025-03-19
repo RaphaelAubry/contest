@@ -1,0 +1,2 @@
+<%= turbo_stream.remove "player_#{@player.id}" %>
+<%= turbo_stream.remove "table-head" if @players.size.zero? %>
