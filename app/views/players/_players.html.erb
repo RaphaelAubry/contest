@@ -1,0 +1,32 @@
+<%= turbo_frame_tag 'players' do %>
+  <% if @players.present? %>
+  <table-1>
+        <table-head id="table-head">
+          <table-row>
+            <table-data>
+              Name
+            </table-data>
+            <table-data>
+              Position
+            </table-data>
+            <table-data>
+              Team
+            </table-data>
+          </table-row>
+        </table-head>
+        <% @players.each do |player| %>
+        <table-row>
+          <%= turbo_frame_tag "player_#{player.id}" do %>
+              <table-data><%= player.name %></table-data>
+              <table-data><%= player.position %></table-data>
+              <table-data><%= player.team.name if player.team %></table-data>
+              <table-data>
+                <%= link_to :edit, edit_player_path(player) %>
+                <%= link_to :delete, player_path(player), data: { turbo_method: :delete, turbo_confirm: 'Etes-vous sûr ?'} %>
+              </table-data>
+        <% end %>
+        </table-row>
+        <% end %>
+    </table-1>
+  <% end %>
+<% end %>

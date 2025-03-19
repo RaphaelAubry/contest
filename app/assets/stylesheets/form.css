@@ -3,6 +3,6 @@ form table-data label {
   align-items: center;
 }
 
-form table-data input[type="text"] {
+form table-data input[type="text"], form table-data select {
   min-width: 190px;
 }

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# success
+one:
+  name: name 1
+  position: Heal
+
+# fail
+two:
+  name: name 2
+  position:
+
+three:
+  name:
+  position: Heal
+
+four:
+  name:
+  position:
