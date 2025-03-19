@@ -1,0 +1,17 @@
+
+<%= form_for team do |form| %>
+  <table-row>
+    <table-data>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </table-data>
+    <table-data>
+      <%= form.label :city %>
+      <%= form.text_field :city %>
+    </table-data>
+    <table-data>
+      <%= form.submit :validate, data: { turbo_frame: 'teams' } %>
+      <%= link_to 'cancel', teams_path %>
+    </table-data>
+  </table-row>
+<% end %>

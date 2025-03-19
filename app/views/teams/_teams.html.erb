@@ -1,0 +1,30 @@
+<%= turbo_frame_tag 'teams' do %>
+
+  <% if @teams.present? %>
+  <table-1>
+        <table-head>
+          <table-row>
+            <table-data>
+              Name
+            </table-data>
+            <table-data>
+              City
+            </table-data>
+          </table-row>
+        </table-head>
+        <% @teams.each do |team| %>
+        <table-row>
+          <%= turbo_frame_tag "team_#{team.id}" do %>
+              <table-data><%= team.name %></table-data>
+              <table-data> <%= team.city %></table-data>
+              <table-data>
+                <%= link_to :edit, edit_team_path(team) %>
+                <%= link_to :delete, team_path(team), data: { turbo_method: :delete, turbo_confirm: 'Etes-vous sûr ?'} %>
+              </table-data>
+        <% end %>
+        </table-row>
+        <% end %>
+    </table-1>
+  <% end %>
+
+<% end %>
