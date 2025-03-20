@@ -7,15 +7,6 @@ class Player < ApplicationRecord
   validates :position, presence: true
   validates :position, inclusion: { in: POSITIONS }
 
-
-  def team_capacity
-    if team.players.present?
-      if team.players.length >= 11
-        errors.add :players, "The team has reached maximum capacity, 11 players"
-      end
-    end
-  end
-
   class << self
     def generate
       begin

@@ -37,5 +37,4 @@ class Team < ApplicationRecord
       Team.all.map { |team| team if team.players.count < 11 }.compact
     end
   end
-
 end

@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'teams' do %>
+<%= turbo_frame_tag "teams" do %>
   <% if @teams.present? %>
     <table-1>
       <table-head id="table-head">
@@ -18,7 +18,7 @@
             <table-data> <%= team.city %></table-data>
             <table-data>
               <%= link_to :edit, edit_team_path(team) %>
-              <%= link_to :delete, team_path(team), data: { turbo_method: :delete, turbo_confirm: 'Etes-vous sûr ?'} %>
+              <%= link_to :delete, team_path(team), data: { turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?" } %>
             </table-data>
           <% end %>
         </table-row>

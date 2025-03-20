@@ -15,7 +15,6 @@ class PlaysController < ApplicationController
       if @teams.length == 8
         result = Battle::Result.generate(params[:teams])
         result.calculate!
-
         @teams.update with: result
         @teams.sort_by_points
       else

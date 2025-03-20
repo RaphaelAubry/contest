@@ -3,7 +3,6 @@ require './lib/array.rb'
 module Battle
   SCORING = { victory: 3, draw: 0, defeat: 0 }
   ATTRIBUTES = [ :points, :kills, :killed ]
-
   class Result
     attr_accessor :data
 
