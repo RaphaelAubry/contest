@@ -4,6 +4,7 @@
 one:
   name: team number 1
   city: city 1
+  id: 1
 
 two:
   name: team number 2

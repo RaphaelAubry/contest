@@ -1,5 +1,4 @@
 class Array
-
   # method for array to set Result instance variable @data
   def to_result
     map { |team_id| [ team_id, { points: 0, kills: 0, killed: 0 } ] }.to_h
