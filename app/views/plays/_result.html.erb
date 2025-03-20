@@ -1,0 +1,29 @@
+<% unless teams.length.zero? %>
+  <table-1>
+    <table-row>
+      <table-data>
+        Equipe
+      </table-data>
+      <table-data>
+        Points
+      </table-data>
+      <table-data>
+        kill reçus
+      </table-data>
+      <table-data>
+        kill marqués
+      </table-data>
+    </table-row>
+    <% teams.each do |team| %>
+      <table-row>
+        <table-data><%= team.name %></table-data>
+        <table-data><%= team.points %></table-data>
+        <table-data><%= team.killed %></table-data>
+        <table-data><%= team.kills %></table-data>
+      </table-row>
+    <% end %>
+  </table-1>
+<% end %>
+<group-link-1>
+  <%= link_to "play", play_path(teams: teams), class: "button" %>
+</group-link-1>

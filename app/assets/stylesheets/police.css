@@ -6,4 +6,5 @@ body {
   font-style: normal;
   background-color: var(--background-color-main);
   color: var(--font-color-main);
+  font-size: 14px;
 }

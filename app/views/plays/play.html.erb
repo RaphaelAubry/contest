@@ -1,0 +1,4 @@
+<% result = @result %>
+<%= turbo_frame_tag "tournament" do %>
+  <%= render partial: "result", locals: { teams: @teams, result: result } %>
+<% end %>

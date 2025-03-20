@@ -4,3 +4,17 @@ a {
   max-width: 200px;
   word-break: break-word;
 }
+
+.button {
+  border: 1px solid green;
+  background-color: green;
+  border-radius: 7px;
+  padding: 5px;
+  color: rgb(237, 233, 233);
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

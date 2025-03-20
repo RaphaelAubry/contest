@@ -11,12 +11,14 @@
         <%= form.select :position, Player::POSITIONS %>
       </table-data>
       <table-data>
-        <%= form.label :team %>
-        <%= form.select(:team_id, Team.all.map { |team| [ team.name, team.id ] }) %>
+        <% if available_teams.present? %>
+          <%= form.label :team %>
+          <%= form.select(:team_id, available_teams) %>
+        <% end %>
       </table-data>
       <table-data>
-        <%= form.submit :validate, data: { turbo_frame: 'players' } %>
-        <%= link_to 'cancel', players_path %>
+        <%= form.submit :validate, data: { turbo_frame: "players" } %>
+        <%= link_to "cancel", players_path %>
       </table-data>
     </table-row>
   </table-1>

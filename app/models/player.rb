@@ -1,12 +1,20 @@
 class Player < ApplicationRecord
-  POSITIONS = %w(Heal Tank DPS).freeze
+  POSITIONS = %w[Heal Tank DPS].freeze
 
   belongs_to :team
 
   validates :name, presence: true
   validates :position, presence: true
   validates :position, inclusion: { in: POSITIONS }
-  validates_associated :team
+
+
+  def team_capacity
+    if team.players.present?
+      if team.players.length >= 11
+        errors.add :players, "The team has reached maximum capacity, 11 players"
+      end
+    end
+  end
 
   class << self
     def generate
