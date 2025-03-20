@@ -14,7 +14,7 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "Teams routes show" do
-    assert_routing({ method: 'get', path: '/teams/1' }, { controller: "teams", action: "show", id: "1" })
+    assert_routing({ method: "get", path: "/teams/1" }, { controller: "teams", action: "show", id: "1" })
   end
 
   test "Teams routes edit" do
@@ -22,7 +22,7 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "Teams routes update" do
-    assert_routing({ method: 'put', path: '/teams/1' }, { controller: "teams", action: "update", id: "1" })
+    assert_routing({ method: "put", path: "/teams/1" }, { controller: "teams", action: "update", id: "1" })
   end
 
   test "Teams routes destroy" do
