@@ -14,7 +14,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "Players routes show" do
-    assert_routing({ method: 'get', path: '/players/1' }, { controller: "players", action: "show", id: "1" })
+    assert_routing({ method: "get", path: "/players/1" }, { controller: "players", action: "show", id: "1" })
   end
 
   test "Players routes edit" do
@@ -22,7 +22,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "Players routes update" do
-    assert_routing({ method: 'put', path: '/players/1' }, { controller: "players", action: "update", id: "1" })
+    assert_routing({ method: "put", path: "/players/1" }, { controller: "players", action: "update", id: "1" })
   end
 
   test "Players routes destroy" do

@@ -1,4 +1,4 @@
-require './lib/array.rb'
+require "./lib/array.rb"
 
 module Battle
   SCORING = { victory: 3, draw: 0, defeat: 0 }

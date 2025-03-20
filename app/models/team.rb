@@ -1,4 +1,4 @@
-require './lib/battle/result.rb'
+require "./lib/battle/result.rb"
 
 class Team < ApplicationRecord
   has_many :players, dependent: :destroy
