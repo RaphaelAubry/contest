@@ -4,3 +4,8 @@ group-link-1 {
   gap: var(--gap-standard);
   margin-top: var(--gap-standard);
 }
+
+result-1 {
+  display: block;
+  margin-top: var(--gap-standard);
+}

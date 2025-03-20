@@ -1,11 +1,11 @@
 <h1>Teams</h1>
 
-<%= render partial: 'teams', locals: { teams: @teams } %>
+<%= render partial: "teams", locals: { teams: @teams } %>
 
 <group-link-1>
   <%= turbo_frame_tag "new_team" do %>
-    <%= link_to 'create a team', new_team_path %>
+    <%= link_to "create a team", new_team_path %>
   <% end %>
-  <%= link_to 'players', players_path %>
+  <%= link_to "players", players_path %>
   <%= link_to :home, root_path %>
 </group-link-1>

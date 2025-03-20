@@ -1,5 +1,5 @@
 <h1>Edit Player</h1>
 
 <%= turbo_frame_tag "player_#{@player.id}" do %>
-  <%= render 'form', player: @player %>
+  <%= render "form", player: @player %>
 <% end %>

@@ -1,11 +1,13 @@
 <h1>Tournament</h1>
 
 <group-link-1>
-  <%= link_to 'home', root_path %>
-  <%= link_to 'generate', generate_path, data: { turbo_frame: "tournament" } %>
+  <%= link_to "home", root_path %>
+  <% unless can_start_tournament? with: @teams %>
+    <%= link_to "generate teams", generate_path, id: "generate", data: { turbo_frame: "tournament" } %>
+  <% end %>
 </group-link-1>
-
-
-<%= turbo_frame_tag "tournament" do %>
-
-<% end %>
+<result-1>
+  <%= turbo_frame_tag "tournament" do %>
+    <%= render partial: "result", locals: { teams: @teams } %>
+  <% end %>
+</result-1>

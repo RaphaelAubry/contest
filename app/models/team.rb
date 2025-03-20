@@ -1,3 +1,5 @@
+require './lib/battle/result.rb'
+
 class Team < ApplicationRecord
   has_many :players, dependent: :destroy
 
@@ -6,13 +8,15 @@ class Team < ApplicationRecord
   validates :name, length: { maximum: 50, too_long: "%{count} characters is the maximum allowed" }
   validates :city, presence: true
   validates :name, length: { minimum: 1, too_short: "%{count} characters is the minimum allowed" }
-  validate :team_capacity
 
-  def team_capacity
-    if players.present?
-      if players.length >= 11
-        errors.add :players, "The team has reached maximum capacity, 11 players"
-      end
+  # instance and class methods for PlaysController
+  Battle::ATTRIBUTES.each do |attr|
+    define_method(attr) do
+      instance_variable_get("@#{attr}")
+    end
+
+    define_method("#{attr}=") do |value|
+      instance_variable_set("@#{attr}", value)
     end
   end
 

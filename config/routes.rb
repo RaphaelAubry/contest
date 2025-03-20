@@ -17,4 +17,5 @@ Rails.application.routes.draw do
 
   get "/tournament", to: "plays#tournament"
   get "/generate", to: "plays#generate"
+  get "/play", to: "plays#play"
 end
